@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PlayerCompetences : MonoBehaviour
 {
-    private Camera mainCam;
-    private Vector3 mousePos;
-    
     public GameObject fireball;
+    public GameObject GatlingModeBullet;
     public PlayerFirePower playerFirePower;
     public Transform playerTransform;
 
-    private int firebeamCost = 1;
+    private int GatlingModeCost = 1;
 
     public float fireRate = 0.3f;
     private float nextFire = 0.0f;
@@ -19,7 +17,7 @@ public class PlayerCompetences : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+       
     }
 
     // Update is called once per frame
@@ -32,9 +30,10 @@ public class PlayerCompetences : MonoBehaviour
             FireballAttack();
         }
 
+        //GatlingMode
         if(Input.GetMouseButton(1))
         {
-            FireBeamAttack();
+            GatlingMode();
         }
     }
 
@@ -43,8 +42,9 @@ public class PlayerCompetences : MonoBehaviour
         Instantiate(fireball, playerTransform.position, Quaternion.identity);
     }
 
-    public void FireBeamAttack()
+    public void GatlingMode()
     {
-        playerFirePower.LoseEnergy(firebeamCost);
+        playerFirePower.LoseEnergy(GatlingModeCost);
+        Instantiate(GatlingModeBullet, playerTransform.position, Quaternion.identity);
     }
 }

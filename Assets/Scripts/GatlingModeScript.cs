@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallScript : MonoBehaviour
+public class GatlingModeScript : MonoBehaviour
 {
     private Vector3 mousePos;
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
-    public int damages = 5;
+    public int damages = 3;
 
+    // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -25,19 +26,10 @@ public class FireBallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject,5);
+        Destroy(gameObject, 5);
     }
-
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (CompareTag("Zombies"))
-        {
-            Destroy(gameObject, 0.2f);
-        }
-
-        if (CompareTag("PhysicStuff"))
-        {
-            Destroy(gameObject, 0.2f);
-        }
+        Destroy(gameObject);
     }
 }

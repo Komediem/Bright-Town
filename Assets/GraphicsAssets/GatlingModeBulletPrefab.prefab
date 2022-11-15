@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3580691192363485915}
   - component: {fileID: -1965065255174394941}
   m_Layer: 7
-  m_Name: FireBallPrefab
+  m_Name: GatlingModeBulletPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1629b30d8b7858b4b985ee7db005b319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 15
   damages: 5
 --- !u!50 &3580691192363485915
 Rigidbody2D:
