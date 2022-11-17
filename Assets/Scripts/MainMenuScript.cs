@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    public Animation settingsMenuAnimation;
-    public Animation buttonsMenuAnimation;
 
     // Start is called before the first frame update
     void Start()
     {
-        buttonsMenuAnimation.Play();
+
     }
 
     // Update is called once per frame
@@ -24,8 +23,8 @@ public class MainMenuScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void SettingsMenuAnimation()
+    public void NestScene()
     {
-        settingsMenuAnimation.Play();
+        SceneManager.LoadScene("Game");
     }
 }
