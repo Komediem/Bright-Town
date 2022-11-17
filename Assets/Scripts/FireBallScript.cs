@@ -30,14 +30,6 @@ public class FireBallScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (CompareTag("Zombies"))
-        {
-            Destroy(gameObject, 0.2f);
-        }
-
-        if (CompareTag("PhysicStuff"))
-        {
-            Destroy(gameObject, 0.2f);
-        }
+        Destroy(gameObject, 0.1f);
     }
 }

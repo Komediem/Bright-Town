@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerFirePower : MonoBehaviour
 {
-    public int maxFirePower = 100;
+    public int maxFirePower = 200;
     public int currentFirePower;
 
     public FirePowerBar firePowerBar;
