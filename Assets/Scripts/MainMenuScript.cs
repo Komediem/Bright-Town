@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public Toggle fullscreen;
+    public Toggle VSync;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        fullscreen.isOn = Screen.fullScreen;
     }
 
     // Update is called once per frame
@@ -26,5 +29,10 @@ public class MainMenuScript : MonoBehaviour
     public void NestScene()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void ApplyGraphics()
+    {
+        Screen.fullScreen = fullscreen.isOn;
     }
 }
