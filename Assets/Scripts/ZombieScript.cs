@@ -12,9 +12,12 @@ public class ZombieScript : MonoBehaviour
     public int MaxHealth = 10;
     public int CurrentHealth;
 
+    public int zombieDamages = 10;
+
     public FireBallScript FireballDamage;
     public GatlingModeScript GatlingDamage;
 
+    public PlayerFirePower playerFirePower;
     
     void Start()
     {
@@ -35,16 +38,21 @@ public class ZombieScript : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player, speed * Time.deltaTime);
     }
 
-    public void OnCollisionEnter2D(Collision2D hitByAttack)
+    public void OnCollisionEnter2D(Collision2D hits)
     {
-        if (hitByAttack.gameObject.CompareTag("Fireball") == true)
+        if (hits.gameObject.CompareTag("Fireball") == true)
         {
             CurrentHealth -= FireballDamage.damages;
         }
 
-        if (hitByAttack.gameObject.CompareTag("GatlingBullet") == true)
+        if (hits.gameObject.CompareTag("GatlingBullet") == true)
         {
             CurrentHealth -= GatlingDamage.damages;
+        }
+
+        if (hits.gameObject.CompareTag("Player") == true)
+        {
+            playerFirePower.currentFirePower -= zombieDamages;
         }
     }
 

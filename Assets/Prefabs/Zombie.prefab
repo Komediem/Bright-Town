@@ -324,9 +324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e267962d570bc94ea4366816cad70bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   speed: 1
-  MaxHealth: 200
+  MaxHealth: 10
   CurrentHealth: 0
   FireballDamage: {fileID: 7606102821229755427, guid: bcd5ec231015ef845974452ad9805bbe, type: 3}
   GatlingDamage: {fileID: 4043151650012631324, guid: 6ae8d63fb01145f4b8b1ea52c758cc44, type: 3}
