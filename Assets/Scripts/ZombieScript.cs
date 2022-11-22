@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ZombieScript : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
+    private Vector2 player;
     public float speed;
 
     public int MaxHealth = 10;
@@ -29,7 +30,9 @@ public class ZombieScript : MonoBehaviour
 
     public void Movement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        player = new Vector2(target.position.x, target.position.y);
+        transform.position = Vector2.MoveTowards(transform.position, player, speed * Time.deltaTime);
     }
 
     public void OnCollisionEnter2D(Collision2D hitByAttack)

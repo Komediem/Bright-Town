@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
     public Toggle fullscreen;
-    public Toggle VSync;
 
     // Start is called before the first frame update
     void Start()
