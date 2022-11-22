@@ -25,9 +25,4 @@ public class InGameMenu : MonoBehaviour
             PauseAnim.SetBool("PauseMenuActivation", true);
         }
     }
-
-    public void Resume()
-    {
-        PauseAnim.SetBool("PauseMenuActivation", false);
-    }
 }

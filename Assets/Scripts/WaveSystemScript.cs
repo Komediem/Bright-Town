@@ -10,6 +10,16 @@ public class WaveSystemScript : MonoBehaviour
     public ZombieSpawn zombieSpawn;
     public int zombieNumber;
 
+    void Start()
+    {
+        WaveSystem();
+    }
+
+    void WaveSystem()
+    {
+
+    }
+
     void Wave1()
     {
         zombieNumber = 5;
