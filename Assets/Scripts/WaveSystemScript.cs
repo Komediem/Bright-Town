@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Transactions;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using TMPro;
 
 public class WaveSystemScript : MonoBehaviour
 {
@@ -14,6 +12,8 @@ public class WaveSystemScript : MonoBehaviour
     public int currentZombie;
     public int zombieNumber;
 
+    public TextMeshProUGUI waveText;
+    private int waveNumber = 0;
 
     void Start()
     {
@@ -27,9 +27,11 @@ public class WaveSystemScript : MonoBehaviour
     }
 
     //ALL WAVES
-
+   
     IEnumerator Wave1()
     {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
         zombieNumber = 5;
         zombieScript.scorePoints = 10;
 
@@ -40,19 +42,20 @@ public class WaveSystemScript : MonoBehaviour
             yield return new WaitForSeconds(3f);
         }
 
-        if(currentZombie == 0)
-        {
-            waveState.SetActive(true);
+        yield return new WaitUntil(() => currentZombie == 0);
 
-            yield return new WaitForSeconds(5f);
-            waveState.SetActive(false);
+        waveState.SetActive(true);
 
-            StartCoroutine(Wave2());
-        }
+        yield return new WaitForSeconds(5f);
+        waveState.SetActive(false);
+
+        StartCoroutine(Wave2());
     }
 
     IEnumerator Wave2()
     {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
         zombieNumber = 10;
         for (int i = 0; i < zombieNumber; i++)
         {
@@ -61,20 +64,21 @@ public class WaveSystemScript : MonoBehaviour
             yield return new WaitForSeconds(2f);
         }
 
+        yield return new WaitUntil(() => currentZombie == 0);
 
-        if (currentZombie == 0)
-        {
-            waveState.SetActive(true);
+        waveState.SetActive(true);
 
-            yield return new WaitForSeconds(5f);
-            waveState.SetActive(false);
+        yield return new WaitForSeconds(5f);
+        waveState.SetActive(false);
 
-            StartCoroutine(Wave3());
-        }
+        StartCoroutine(Wave3());
+        
     }
 
     IEnumerator Wave3()
     {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
         zombieNumber = 20;
 
         for (int i = 0; i < zombieNumber; i++)
@@ -84,20 +88,20 @@ public class WaveSystemScript : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        
-        if (currentZombie == 0)
-        {
-            waveState.SetActive(true);
+        yield return new WaitUntil(() => currentZombie == 0);
 
-            yield return new WaitForSeconds(5f);
-            waveState.SetActive(false);
+        waveState.SetActive(true);
 
-            StartCoroutine(Wave4());
-        }
+        yield return new WaitForSeconds(5f);
+        waveState.SetActive(false);
+
+        StartCoroutine(Wave4());
     }
 
     IEnumerator Wave4()
     {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
         zombieNumber = 40;
 
         for (int i = 0; i < zombieNumber; i++)
@@ -108,19 +112,21 @@ public class WaveSystemScript : MonoBehaviour
         }
 
 
-        if (currentZombie == 0)
-        {
-            waveState.SetActive(true);
+        yield return new WaitUntil(() => currentZombie == 0);
+       
+        waveState.SetActive(true);
 
-            yield return new WaitForSeconds(5f);
-            waveState.SetActive(false);
+        yield return new WaitForSeconds(5f);
+        waveState.SetActive(false);
 
-            StartCoroutine(Wave5());
-        }
+        StartCoroutine(Wave5());
+       
     }
 
     IEnumerator Wave5()
     {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
         zombieNumber = 20;
 
         for (int i = 0; i < zombieNumber; i++)
@@ -130,15 +136,13 @@ public class WaveSystemScript : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
+        yield return new WaitUntil(() => currentZombie == 0);
 
-        if (currentZombie == 0)
-        {
-            waveState.SetActive(true);
+        waveState.SetActive(true);
 
-            yield return new WaitForSeconds(5f);
-            waveState.SetActive(false);
+        yield return new WaitForSeconds(5f);
+        waveState.SetActive(false);
 
-            StartCoroutine(Wave3());
-        }
+        StartCoroutine(Wave3());
     }
 }

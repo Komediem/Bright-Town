@@ -31,7 +31,7 @@ public class PlayerCompetences : MonoBehaviour
         }
 
         //GatlingMode
-        if(Input.GetMouseButton(1))
+        if(Input.GetMouseButton(1) && playerFirePower.currentGatlingBullet > 0)
         {
             GatlingMode();
         }
