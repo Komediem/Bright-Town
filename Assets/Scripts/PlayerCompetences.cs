@@ -44,7 +44,7 @@ public class PlayerCompetences : MonoBehaviour
 
     public void GatlingMode()
     {
-        playerFirePower.LoseEnergy(GatlingModeCost);
+        playerFirePower.LoseGatlingBullet(GatlingModeCost);
         Instantiate(GatlingModeBullet, playerTransform.position, Quaternion.identity);
     }
 }

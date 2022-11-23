@@ -6,27 +6,50 @@ public class ZombieSpawn : MonoBehaviour
 {
     public Transform Spawner1, Spawner2, Spawner3, Spawner4;
 
-    public GameObject zombie1;
+    public GameObject regularZombie;
+    public GameObject runners;
 
-    public void spawnZombie()
+    public void spawnRegularZombie()
     {
-        int randomSpawner = Random.Range(1, 4);
+        int randomSpawner = Random.Range(1, 5);
 
         if(randomSpawner == 1)
         {
-            Instantiate(zombie1, Spawner1.position, Quaternion.identity);
+            Instantiate(regularZombie, Spawner1.position, Quaternion.identity);
         }
         if(randomSpawner == 2)
         {
-            Instantiate(zombie1, Spawner2.position, Quaternion.identity);
+            Instantiate(regularZombie, Spawner2.position, Quaternion.identity);
         }
         if (randomSpawner == 3)
         {
-            Instantiate(zombie1, Spawner3.position, Quaternion.identity);
+            Instantiate(regularZombie, Spawner3.position, Quaternion.identity);
         }
         if (randomSpawner == 4)
         {
-            Instantiate(zombie1, Spawner4.position, Quaternion.identity);
+            Instantiate(regularZombie, Spawner4.position, Quaternion.identity);
+        }
+    }
+
+    public void spawnRunners()
+    {
+        int randomSpawner = Random.Range(1, 5);
+
+        if (randomSpawner == 1)
+        {
+            Instantiate(runners, Spawner1.position, Quaternion.identity);
+        }
+        if (randomSpawner == 2)
+        {
+            Instantiate(runners, Spawner2.position, Quaternion.identity);
+        }
+        if (randomSpawner == 3)
+        {
+            Instantiate(runners, Spawner3.position, Quaternion.identity);
+        }
+        if (randomSpawner == 4)
+        {
+            Instantiate(runners, Spawner4.position, Quaternion.identity);
         }
     }
 }

@@ -13,12 +13,11 @@ public class ZombieScript : MonoBehaviour
     public int CurrentHealth;
 
     public int zombieDamages = 10;
+    public int scorePoints;
 
     public FireBallScript FireballDamage;
     public GatlingModeScript GatlingDamage;
 
-    public PlayerFirePower playerFirePower;
-    
     void Start()
     {
         CurrentHealth = MaxHealth;
@@ -30,7 +29,7 @@ public class ZombieScript : MonoBehaviour
         Movement();
         Death();
     }
-
+    
     public void Movement()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -42,17 +41,18 @@ public class ZombieScript : MonoBehaviour
     {
         if (hits.gameObject.CompareTag("Fireball") == true)
         {
-            CurrentHealth -= FireballDamage.damages;
+            CurrentHealth -= FindObjectOfType<FireBallScript>().damages;
         }
 
         if (hits.gameObject.CompareTag("GatlingBullet") == true)
         {
-            CurrentHealth -= GatlingDamage.damages;
+            CurrentHealth -= FindObjectOfType<GatlingModeScript>().damages;
         }
 
         if (hits.gameObject.CompareTag("Player") == true)
         {
-            playerFirePower.currentFirePower -= zombieDamages;
+            FindObjectOfType<PlayerFirePower>().currentFirePower -= zombieDamages;
+            FindObjectOfType<PlayerFirePower>().LoseEnergy(zombieDamages);
         }
     }
 
@@ -61,6 +61,8 @@ public class ZombieScript : MonoBehaviour
         if(CurrentHealth <= 0)
         {
             Destroy(gameObject);
+            FindObjectOfType<ScoreScript>().score += FindObjectOfType<WaveSystemScript>().zombieScript.scorePoints;
+            FindObjectOfType<WaveSystemScript>().currentZombie -= 1;
         }
     }
 }

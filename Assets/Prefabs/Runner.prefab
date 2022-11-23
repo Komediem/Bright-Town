@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 6843897501475843255}
   - component: {fileID: 6843897501475843914}
   m_Layer: 6
-  m_Name: Zombie
+  m_Name: Runner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,16 +324,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e267962d570bc94ea4366816cad70bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   MaxHealth: 10
   CurrentHealth: 0
   zombieDamages: 10
   scorePoints: 10
   FireballDamage: {fileID: 7606102821229755427, guid: bcd5ec231015ef845974452ad9805bbe, type: 3}
   GatlingDamage: {fileID: 4043151650012631324, guid: 6ae8d63fb01145f4b8b1ea52c758cc44, type: 3}
-  playerFirePower: {fileID: 0}
-  scoreScript: {fileID: 0}
-  waveSystemScript: {fileID: 0}
 --- !u!50 &6843897501475843254
 Rigidbody2D:
   serializedVersion: 4
