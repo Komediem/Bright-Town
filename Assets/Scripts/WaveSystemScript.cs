@@ -21,11 +21,6 @@ public class WaveSystemScript : MonoBehaviour
         StartCoroutine(Wave1());
     }
 
-    void Update()
-    {
-
-    }
-
     //ALL WAVES
    
     IEnumerator Wave1()

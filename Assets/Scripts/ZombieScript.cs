@@ -15,9 +15,6 @@ public class ZombieScript : MonoBehaviour
     public int zombieDamages = 10;
     public int scorePoints;
 
-    public FireBallScript FireballDamage;
-    public GatlingModeScript GatlingDamage;
-
     void Start()
     {
         CurrentHealth = MaxHealth;
