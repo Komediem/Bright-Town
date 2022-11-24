@@ -7,7 +7,7 @@ public class WaveSystemScript : MonoBehaviour
     public ZombieSpawn zombieSpawn;
     public ZombieScript zombieScript;
 
-    public GameObject waveState;
+    public TextMeshProUGUI waveState;
 
     public int currentZombie;
     public int zombieNumber;
@@ -17,12 +17,25 @@ public class WaveSystemScript : MonoBehaviour
 
     void Start()
     {
-        waveState.SetActive(false);
-        StartCoroutine(Wave1());
+        waveState.enabled = false;
+        StartCoroutine(Beginning());
     }
 
     //ALL WAVES
-   
+
+    IEnumerator Beginning()
+    {
+        waveNumber = 0;
+        waveText.text = waveNumber.ToString();
+        waveState.text = "Zombies are coming... Be prepared !";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave1());
+    }
+
     IEnumerator Wave1()
     {
         waveNumber++;
@@ -39,10 +52,11 @@ public class WaveSystemScript : MonoBehaviour
 
         yield return new WaitUntil(() => currentZombie == 0);
 
-        waveState.SetActive(true);
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
 
         yield return new WaitForSeconds(5f);
-        waveState.SetActive(false);
+        waveState.enabled = false;
 
         StartCoroutine(Wave2());
     }
@@ -61,10 +75,11 @@ public class WaveSystemScript : MonoBehaviour
 
         yield return new WaitUntil(() => currentZombie == 0);
 
-        waveState.SetActive(true);
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
 
         yield return new WaitForSeconds(5f);
-        waveState.SetActive(false);
+        waveState.enabled = false;
 
         StartCoroutine(Wave3());
         
@@ -85,10 +100,11 @@ public class WaveSystemScript : MonoBehaviour
 
         yield return new WaitUntil(() => currentZombie == 0);
 
-        waveState.SetActive(true);
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
 
         yield return new WaitForSeconds(5f);
-        waveState.SetActive(false);
+        waveState.enabled = false;
 
         StartCoroutine(Wave4());
     }
@@ -108,11 +124,12 @@ public class WaveSystemScript : MonoBehaviour
 
 
         yield return new WaitUntil(() => currentZombie == 0);
-       
-        waveState.SetActive(true);
+
+        waveState.text = "Zombies seems a bit different...";
+        waveState.enabled = true;
 
         yield return new WaitForSeconds(5f);
-        waveState.SetActive(false);
+        waveState.enabled = false;
 
         StartCoroutine(Wave5());
        
@@ -122,7 +139,9 @@ public class WaveSystemScript : MonoBehaviour
     {
         waveNumber++;
         waveText.text = waveNumber.ToString();
+
         zombieNumber = 20;
+        zombieScript.scorePoints = 25;
 
         for (int i = 0; i < zombieNumber; i++)
         {
@@ -133,10 +152,11 @@ public class WaveSystemScript : MonoBehaviour
 
         yield return new WaitUntil(() => currentZombie == 0);
 
-        waveState.SetActive(true);
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
 
         yield return new WaitForSeconds(5f);
-        waveState.SetActive(false);
+        waveState.enabled = false;
 
         StartCoroutine(Wave3());
     }

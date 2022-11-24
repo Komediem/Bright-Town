@@ -6,23 +6,33 @@ public class InGameMenu : MonoBehaviour
 {
     public GameObject GameOver;
     public GameObject Pause;
+    public WaveSystemScript waveSystemScript;
+    public PlayerFirePower playerFirePower;
 
     public Animator PauseAnim;
+    public bool verif = false;
 
-    private void Update()
+    private void FixedUpdate()
     {
         PauseMenu();
+        GameOverMenu();
     }
     public void GameOverMenu()
     {
-        
+        if (playerFirePower.currentFirePower <= 0)
+        {
+            Time.timeScale = 0;
+            GameOver.SetActive(true);
+        }
     }
 
     public void PauseMenu()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            PauseAnim.SetBool("PauseMenuActivation", true);
+            Pause.SetActive(true);
+            waveSystemScript.waveState.enabled = false;
+            Time.timeScale = 0;
         }
     }
 }
