@@ -6,6 +6,7 @@ public class WaveSystemScript : MonoBehaviour
 {
     public ZombieSpawn zombieSpawn;
     public ZombieScript zombieScript;
+    public PassiveWave passiveWave;
 
     public TextMeshProUGUI waveState;
 
@@ -14,6 +15,7 @@ public class WaveSystemScript : MonoBehaviour
 
     public TextMeshProUGUI waveText;
     private int waveNumber = 0;
+    private int lightZoneSpawnNumber = 2;
 
     void Start()
     {
@@ -55,7 +57,9 @@ public class WaveSystemScript : MonoBehaviour
         waveState.text = "Next Wave in coming...";
         waveState.enabled = true;
 
-        yield return new WaitForSeconds(5f);
+        passiveWave.spawnLightZone();
+
+        yield return new WaitForSeconds(10f);
         waveState.enabled = false;
 
         StartCoroutine(Wave2());

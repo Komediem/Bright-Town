@@ -22,14 +22,6 @@ public class PlayerFirePower : MonoBehaviour
         gatlingModeBar.SetMaxGatlingBar(maxGatlingBullet);
     }
 
-    void Update()
-    {
-        if(currentFirePower <= 0)
-        {
-
-        }
-    }
-
     public void LoseEnergy(int damage)
     {
         currentFirePower -= damage;

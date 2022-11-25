@@ -9,7 +9,6 @@ public class InGameMenu : MonoBehaviour
     public WaveSystemScript waveSystemScript;
     public PlayerFirePower playerFirePower;
 
-    public Animator PauseAnim;
     public bool verif = false;
 
     private void FixedUpdate()
@@ -34,5 +33,11 @@ public class InGameMenu : MonoBehaviour
             waveSystemScript.waveState.enabled = false;
             Time.timeScale = 0;
         }
+    }
+
+    public void ExitPauseMenu()
+    {
+        Pause.SetActive(false);
+        Time.timeScale = 1;
     }
 }
