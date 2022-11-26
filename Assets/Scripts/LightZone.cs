@@ -5,18 +5,19 @@ using UnityEngine;
 public class LightZone : MonoBehaviour
 {
     public int gatlingBulletGain = 2;
-    private GameObject interactText;
+    public GameObject interactText;
 
     public void Start()
     {
         interactText = GameObject.Find("InteractionText");
     }
 
-    public void OnTriggerEnter2D(Collider2D interactionLightZone)
+    public void OnTriggerStay2D(Collider2D interactionLightZone)
     {
+        interactText.SetActive(true);
+
         if (Input.GetKey(KeyCode.E) && FindObjectOfType<PlayerFirePower>().currentGatlingBullet < 500)
         {
-            interactText.SetActive(true);
             FindObjectOfType<PlayerFirePower>().currentGatlingBullet += gatlingBulletGain;
         }
     }

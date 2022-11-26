@@ -15,7 +15,6 @@ public class WaveSystemScript : MonoBehaviour
 
     public TextMeshProUGUI waveText;
     private int waveNumber = 0;
-    private int lightZoneSpawnNumber = 2;
 
     void Start()
     {
