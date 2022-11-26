@@ -32,7 +32,6 @@ public class LightZone : MonoBehaviour
                 Debug.Log("gain d'énergie");
             }
         }
-        
     }
 
     public void OnTriggerExit2D(Collider2D interactionLightZone)

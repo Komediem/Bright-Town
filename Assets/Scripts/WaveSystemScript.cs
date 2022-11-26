@@ -26,6 +26,7 @@ public class WaveSystemScript : MonoBehaviour
 
     IEnumerator Beginning()
     {
+        yield return new WaitForSeconds(5f);
         waveNumber = 0;
         waveText.text = waveNumber.ToString();
         waveState.text = "Zombies are coming... Be prepared !";

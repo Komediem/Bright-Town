@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
     public Toggle fullscreen;
+    public GameObject introBlackScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +26,14 @@ public class MainMenuScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void NestScene()
+    public void NextScene()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void Intro()
+    {
+        introBlackScreen.SetActive(true);
     }
 
     public void ApplyGraphics()
