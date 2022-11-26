@@ -4955,7 +4955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d702eb89938f94297b2096095046cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gatlingBulletGain: 2
+  gatlingBulletGain: 1
 --- !u!70 &-1400192334508576694
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

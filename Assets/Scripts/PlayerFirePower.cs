@@ -11,7 +11,7 @@ public class PlayerFirePower : MonoBehaviour
 
     public GatlingModeBar gatlingModeBar;
 
-    public int maxGatlingBullet = 500;
+    public int maxGatlingBullet = 300;
     public int currentGatlingBullet;
 
     void Start()

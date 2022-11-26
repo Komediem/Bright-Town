@@ -14,6 +14,8 @@ public class PlayerCompetences : MonoBehaviour
     public float fireRate = 0.3f;
     private float nextFire = 0.0f;
 
+    public bool canFire = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +26,14 @@ public class PlayerCompetences : MonoBehaviour
     void Update()
     {
         //Fireball
-        if(Input.GetMouseButton(0) && Time.time > nextFire)
+        if(Input.GetMouseButton(0) && Time.time > nextFire && canFire == true)
         {
             nextFire = Time.time + fireRate;
             FireballAttack();
         }
 
         //GatlingMode
-        if(Input.GetMouseButton(1) && playerFirePower.currentGatlingBullet > 0)
+        if(Input.GetMouseButton(1) && playerFirePower.currentGatlingBullet > 0 && canFire == true)
         {
             GatlingMode();
         }
