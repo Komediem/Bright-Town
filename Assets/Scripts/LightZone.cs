@@ -25,11 +25,10 @@ public class LightZone : MonoBehaviour
             playerCompetences.canFire = false;
             passiveWave.InteractionTextEnter();
 
-            if (Input.GetKey(KeyCode.E) && playerFirePower.currentGatlingBullet <= 500)
+            if (Input.GetKey(KeyCode.E) && playerFirePower.currentGatlingBullet <= playerFirePower.maxGatlingBullet)
             {
                 playerFirePower.currentGatlingBullet += gatlingBulletGain;
                 gatlingModeBar.SetGatlingBar(playerFirePower.currentGatlingBullet);
-                Debug.Log("gain d'énergie");
             }
         }
     }

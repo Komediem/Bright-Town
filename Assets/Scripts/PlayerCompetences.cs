@@ -11,7 +11,7 @@ public class PlayerCompetences : MonoBehaviour
 
     private int GatlingModeCost = 1;
 
-    public float fireRate = 0.3f;
+    public float fireRate = 0.5f;
     private float nextFire = 0.0f;
 
     public bool canFire = true;

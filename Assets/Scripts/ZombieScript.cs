@@ -15,6 +15,8 @@ public class ZombieScript : MonoBehaviour
     public int zombieDamages = 10;
     public int scorePoints;
 
+    public int zombieKilledNumber;
+
     void Start()
     {
         CurrentHealth = MaxHealth;
@@ -59,7 +61,9 @@ public class ZombieScript : MonoBehaviour
         {
             Destroy(gameObject);
             FindObjectOfType<ScoreScript>().score += FindObjectOfType<WaveSystemScript>().zombieScript.scorePoints;
+            FindObjectOfType<ScoreScript>().maxScore += FindObjectOfType<WaveSystemScript>().zombieScript.scorePoints;
             FindObjectOfType<WaveSystemScript>().currentZombie -= 1;
+            zombieKilledNumber++;
         }
     }
 }
