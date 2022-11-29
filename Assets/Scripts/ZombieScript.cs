@@ -7,7 +7,7 @@ public class ZombieScript : MonoBehaviour
 {
     private Transform target;
     private Vector2 player;
-    public float speed = 1f;
+    public float speed = 1.5f;
 
     public int MaxHealth = 10;
     public int CurrentHealth;

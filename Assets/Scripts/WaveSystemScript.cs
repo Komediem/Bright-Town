@@ -43,7 +43,7 @@ public class WaveSystemScript : MonoBehaviour
         waveNumber++;
         waveText.text = waveNumber.ToString();
         zombieNumber = 5;
-        zombieScript.scorePoints = 10;
+        zombieScript.scorePoints = 15;
 
         for (int i = 0; i < zombieNumber; i++)
         {
@@ -82,7 +82,7 @@ public class WaveSystemScript : MonoBehaviour
         waveState.text = "Next Wave in coming...";
         waveState.enabled = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         waveState.enabled = false;
 
         StartCoroutine(Wave3());
@@ -107,7 +107,7 @@ public class WaveSystemScript : MonoBehaviour
         waveState.text = "Next Wave in coming...";
         waveState.enabled = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         waveState.enabled = false;
 
         StartCoroutine(Wave4());
@@ -132,7 +132,7 @@ public class WaveSystemScript : MonoBehaviour
         waveState.text = "Zombies seems a bit different...";
         waveState.enabled = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         waveState.enabled = false;
 
         StartCoroutine(Wave5());
@@ -159,9 +159,229 @@ public class WaveSystemScript : MonoBehaviour
         waveState.text = "Next Wave in coming...";
         waveState.enabled = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         waveState.enabled = false;
 
-        StartCoroutine(Wave3());
+        StartCoroutine(Wave6());
+    }
+
+    IEnumerator Wave6()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieNumber = 30;
+        zombieScript.scorePoints = 20;
+        zombieScript.MaxHealth = 15;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRegularZombie();
+            yield return new WaitForSeconds(2f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave7());
+    }
+
+    IEnumerator Wave7()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieNumber = 50;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRegularZombie();
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave8());
+    }
+
+    IEnumerator Wave8()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieScript.scorePoints = 30;
+        zombieNumber = 35;
+        zombieScript.MaxHealth = 10;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRunners();
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave9());
+    }
+
+    IEnumerator Wave9()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieScript.scorePoints = 20;
+        zombieNumber = 70;
+        zombieScript.MaxHealth = 15;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRegularZombie();
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "What is this... An Invasion !";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave10());
+    }
+
+    IEnumerator Wave10()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieNumber = 150;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRegularZombie();
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        zombieScript.scorePoints = 25;
+        zombieNumber = 50;
+        zombieScript.MaxHealth = 10;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRunners();
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave11());
+    }
+
+    IEnumerator Wave11()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieScript.scorePoints = 20;
+        zombieNumber = 90;
+        zombieScript.MaxHealth = 20;
+        zombieScript.speed = 2f;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRegularZombie();
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave12());
+    }
+
+    IEnumerator Wave12()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieNumber = 100;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRegularZombie();
+            yield return new WaitForSeconds(0.75f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave13());
+    }
+
+    IEnumerator Wave13()
+    {
+        waveNumber++;
+        waveText.text = waveNumber.ToString();
+
+        zombieNumber = 120;
+
+        for (int i = 0; i < zombieNumber; i++)
+        {
+            currentZombie++;
+            zombieSpawn.spawnRegularZombie();
+            yield return new WaitForSeconds(0.75f);
+        }
+
+        yield return new WaitUntil(() => currentZombie == 0);
+
+        waveState.text = "Next Wave in coming...";
+        waveState.enabled = true;
+
+        yield return new WaitForSeconds(10f);
+        waveState.enabled = false;
+
+        StartCoroutine(Wave10());
     }
 }

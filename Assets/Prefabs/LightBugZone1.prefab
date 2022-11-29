@@ -4956,6 +4956,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gatlingBulletGain: 1
+  passiveWave: {fileID: 0}
+  playerCompetences: {fileID: 0}
+  playerFirePower: {fileID: 0}
+  gatlingModeBar: {fileID: 0}
 --- !u!70 &-1400192334508576694
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -329,11 +329,7 @@ MonoBehaviour:
   CurrentHealth: 0
   zombieDamages: 10
   scorePoints: 10
-  FireballDamage: {fileID: 7606102821229755427, guid: bcd5ec231015ef845974452ad9805bbe, type: 3}
-  GatlingDamage: {fileID: 4043151650012631324, guid: 6ae8d63fb01145f4b8b1ea52c758cc44, type: 3}
-  playerFirePower: {fileID: 0}
-  scoreScript: {fileID: 0}
-  waveSystemScript: {fileID: 0}
+  zombieKilledNumber: 0
 --- !u!50 &6843897501475843254
 Rigidbody2D:
   serializedVersion: 4
@@ -368,8 +364,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13347419, y: -0.36831486}
-  m_Size: {x: 0.6207549, y: 0.32899335}
+  m_Offset: {x: 0.1334742, y: -0.25053385}
+  m_Size: {x: 0.62075496, y: 0.45817277}
   m_Direction: 1
 --- !u!95 &6843897501475843914
 Animator:
