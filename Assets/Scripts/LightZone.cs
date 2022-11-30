@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightZone : MonoBehaviour
 {
-    public int gatlingBulletGain = 1;
+    public int gatlingBulletGain = 3;
     public PassiveWave passiveWave;
     public PlayerCompetences playerCompetences;
     public PlayerFirePower playerFirePower;

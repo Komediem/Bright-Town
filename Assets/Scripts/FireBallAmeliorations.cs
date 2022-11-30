@@ -44,17 +44,17 @@ public class FireBallAmeliorations : MonoBehaviour
         fireBallScript.damages = 5;
 
 
-        fireballSpeedCost = 500;
+        fireballSpeedCost = 300;
         fireballSpeedCostText.text = fireballSpeedCost.ToString();
         fireballSpeedlevel = 1;
         fireballSpeedlevelText.text = fireballSpeedlevel.ToString();
 
-        fireballFireRateCost = 500;
+        fireballFireRateCost = 300;
         fireballFireRateCostText.text = fireballFireRateCost.ToString();
         fireballFireRatelevel = 1;
         fireballFireRatelevelText.text = fireballFireRatelevel.ToString();
 
-        fireballDamagesCost = 500;
+        fireballDamagesCost = 300;
         fireballDamagesCostText.text = fireballDamagesCost.ToString();
         fireballDamageslevel = 1;
         fireballDamageslevelText.text = fireballDamageslevel.ToString();
@@ -67,7 +67,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballSpeedCost;
             fireBallScript.force += 2;
 
-            fireballSpeedCost = 700;
+            fireballSpeedCost = 500;
             fireballSpeedCostText.text = fireballSpeedCost.ToString();
 
             fireballSpeedlevel = 2;
@@ -79,7 +79,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballSpeedCost;
             fireBallScript.force += 2;
 
-            fireballSpeedCost = 1000;
+            fireballSpeedCost = 700;
             fireballSpeedCostText.text = fireballSpeedCost.ToString();
 
             fireballSpeedlevel = 3;
@@ -91,7 +91,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballSpeedCost;
             fireBallScript.force += 2;
 
-            fireballSpeedCost = 1500;
+            fireballSpeedCost = 1000;
             fireballSpeedCostText.text = fireballSpeedCost.ToString();
 
             fireballSpeedlevel = 4;
@@ -103,7 +103,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballSpeedCost;
             fireBallScript.force += 2;
 
-            fireballSpeedCost = 2500;
+            fireballSpeedCost = 1500;
             fireballSpeedCostText.text = fireballSpeedCost.ToString();
 
             fireballSpeedlevel = 5;
@@ -116,9 +116,9 @@ public class FireBallAmeliorations : MonoBehaviour
         if (fireballFireRatelevel == 1 && scoreScript.score > fireballFireRateCost)
         {
             scoreScript.score -= fireballFireRateCost;
-            playerCompetences.fireRate -= 0.05f;
+            playerCompetences.fireRate -= 0.03f;
 
-            fireballFireRateCost = 700;
+            fireballFireRateCost = 500;
             fireballFireRateCostText.text = fireballFireRateCost.ToString();
 
             fireballFireRatelevel = 2;
@@ -128,9 +128,9 @@ public class FireBallAmeliorations : MonoBehaviour
         if (fireballFireRatelevel == 2 && scoreScript.score > fireballFireRateCost)
         {
             scoreScript.score -= fireballFireRateCost;
-            playerCompetences.fireRate -= 0.05f;
+            playerCompetences.fireRate -= 0.03f;
 
-            fireballFireRateCost = 1000;
+            fireballFireRateCost = 700;
             fireballFireRateCostText.text = fireballFireRateCost.ToString();
 
             fireballFireRatelevel = 3;
@@ -140,9 +140,9 @@ public class FireBallAmeliorations : MonoBehaviour
         if (fireballFireRatelevel == 3 && scoreScript.score > fireballFireRateCost)
         {
             scoreScript.score -= fireballFireRateCost;
-            playerCompetences.fireRate -= 0.05f;
+            playerCompetences.fireRate -= 0.03f;
 
-            fireballFireRateCost = 1500;
+            fireballFireRateCost = 1000;
             fireballFireRateCostText.text = fireballFireRateCost.ToString();
 
             fireballFireRatelevel = 4;
@@ -152,9 +152,9 @@ public class FireBallAmeliorations : MonoBehaviour
         if (fireballFireRatelevel == 4 && scoreScript.score > fireballFireRateCost)
         {
             scoreScript.score -= fireballFireRateCost;
-            playerCompetences.fireRate -= 0.05f;
+            playerCompetences.fireRate -= 0.03f;
 
-            fireballFireRateCost = 2500;
+            fireballFireRateCost = 1500;
             fireballFireRateCostText.text = fireballFireRateCost.ToString();
 
             fireballFireRatelevel = 5;
@@ -169,7 +169,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballDamagesCost;
             fireBallScript.damages += 2;
 
-            fireballDamagesCost = 700;
+            fireballDamagesCost = 500;
             fireballDamagesCostText.text = fireballDamagesCost.ToString();
 
             fireballDamageslevel = 2;
@@ -181,7 +181,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballDamagesCost;
             fireBallScript.damages += 2;
 
-            fireballDamagesCost = 1000;
+            fireballDamagesCost = 700;
             fireballDamagesCostText.text = fireballDamagesCost.ToString();
 
             fireballDamageslevel = 3;
@@ -193,7 +193,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballDamagesCost;
             fireBallScript.damages += 2;
 
-            fireballDamagesCost = 1500;
+            fireballDamagesCost = 1000;
             fireballDamagesCostText.text = fireballDamagesCost.ToString();
 
             fireballDamageslevel = 4;
@@ -205,7 +205,7 @@ public class FireBallAmeliorations : MonoBehaviour
             scoreScript.score -= fireballDamagesCost;
             fireBallScript.damages += 2;
 
-            fireballDamagesCost = 2500;
+            fireballDamagesCost = 1500;
             fireballDamagesCostText.text = fireballDamagesCost.ToString();
 
             fireballDamageslevel = 5;

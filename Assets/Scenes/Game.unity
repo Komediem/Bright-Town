@@ -8812,7 +8812,7 @@ MonoBehaviour:
   maxFirePower: 200
   currentFirePower: 0
   gatlingModeBar: {fileID: 1209575340}
-  maxGatlingBullet: 300
+  maxGatlingBullet: 1500
   currentGatlingBullet: 0
 --- !u!114 &386208868
 MonoBehaviour:

@@ -40,21 +40,21 @@ public class GatlingAmeliorations : MonoBehaviour
     public void gatlingModeBulletStats()
     {
         gatlingModeScript.force = 10;
-        playerFirePower.maxGatlingBullet = 300;
+        playerFirePower.maxGatlingBullet = 1500;
         gatlingModeScript.damages = 5;
 
 
-        bulletSpeedCost = 500;
+        bulletSpeedCost = 300;
         bulletSpeedCostText.text = bulletSpeedCost.ToString();
         bulletSpeedlevel = 1;
         bulletSpeedlevelText.text = bulletSpeedlevel.ToString();
 
-        moreStorageCost = 500;
+        moreStorageCost = 300;
         moreStorageCostText.text = moreStorageCost.ToString();
         moreStoragelevel = 1;
         moreStoragelevelText.text = moreStoragelevel.ToString();
 
-        bulletDamagesCost = 500;
+        bulletDamagesCost = 300;
         bulletDamagesCostText.text = bulletDamagesCost.ToString();
         bulletDamageslevel = 1;
         bulletlDamageslevelText.text = bulletDamageslevel.ToString();
@@ -67,7 +67,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletSpeedCost;
             gatlingModeScript.force += 1;
 
-            bulletSpeedCost = 700;
+            bulletSpeedCost = 500;
             bulletSpeedCostText.text = bulletSpeedCost.ToString();
 
             bulletSpeedlevel = 2;
@@ -79,7 +79,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletSpeedCost;
             gatlingModeScript.force += 1;
 
-            bulletSpeedCost = 1000;
+            bulletSpeedCost = 700;
             bulletSpeedCostText.text = bulletSpeedCost.ToString();
 
             bulletSpeedlevel = 3;
@@ -91,7 +91,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletSpeedCost;
             gatlingModeScript.force += 1;
 
-            bulletSpeedCost = 1500;
+            bulletSpeedCost = 1000;
             bulletSpeedCostText.text = bulletSpeedCost.ToString();
 
             bulletSpeedlevel = 4;
@@ -103,7 +103,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletSpeedCost;
             gatlingModeScript.force += 1;
 
-            bulletSpeedCost = 2500;
+            bulletSpeedCost = 1500;
             bulletSpeedCostText.text = bulletSpeedCost.ToString();
 
             bulletSpeedlevel = 5;
@@ -118,7 +118,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= moreStorageCost;
             playerFirePower.maxGatlingBullet += 50;
 
-            moreStorageCost = 700;
+            moreStorageCost = 500;
             moreStorageCostText.text = moreStorageCost.ToString();
 
             moreStoragelevel = 2;
@@ -130,7 +130,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= moreStorageCost;
             playerFirePower.maxGatlingBullet += 50;
 
-            moreStorageCost = 1000;
+            moreStorageCost = 700;
             moreStorageCostText.text = moreStorageCost.ToString();
 
             moreStoragelevel = 3;
@@ -142,7 +142,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= moreStorageCost;
             playerFirePower.maxGatlingBullet += 50;
 
-            moreStorageCost = 1500;
+            moreStorageCost = 1000;
             moreStorageCostText.text = moreStorageCost.ToString();
 
             moreStoragelevel = 4;
@@ -154,7 +154,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= moreStorageCost;
             playerFirePower.maxGatlingBullet += 50;
 
-            moreStorageCost = 2500;
+            moreStorageCost = 1500;
             moreStorageCostText.text = moreStorageCost.ToString();
 
             moreStoragelevel = 5;
@@ -169,7 +169,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletDamagesCost;
             gatlingModeScript.damages += 1;
 
-            bulletDamagesCost = 700;
+            bulletDamagesCost = 500;
             bulletDamagesCostText.text = bulletDamagesCost.ToString();
 
             bulletDamageslevel = 2;
@@ -181,7 +181,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletDamagesCost;
             gatlingModeScript.damages += 1;
 
-            bulletDamagesCost = 1000;
+            bulletDamagesCost = 700;
             bulletDamagesCostText.text = bulletDamagesCost.ToString();
 
             bulletDamageslevel = 3;
@@ -193,7 +193,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletDamagesCost;
             gatlingModeScript.damages += 1;
 
-            bulletDamagesCost = 1500;
+            bulletDamagesCost = 1000;
             bulletDamagesCostText.text = bulletDamagesCost.ToString();
 
             bulletDamageslevel = 4;
@@ -205,7 +205,7 @@ public class GatlingAmeliorations : MonoBehaviour
             scoreScript.score -= bulletDamagesCost;
             gatlingModeScript.damages += 1;
 
-            bulletDamagesCost = 2500;
+            bulletDamagesCost = 1500;
             bulletDamagesCostText.text = bulletDamagesCost.ToString();
 
             bulletDamageslevel = 5;

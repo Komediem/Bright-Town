@@ -48,7 +48,6 @@ public class InGameMenu : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             Pause.SetActive(true);
-            waveSystemScript.waveState.enabled = false;
             Time.timeScale = 0;
         }
     }
@@ -56,7 +55,6 @@ public class InGameMenu : MonoBehaviour
     public void ExitPauseMenu()
     {
         Pause.SetActive(false);
-        waveSystemScript.waveState.enabled = true;
         Time.timeScale = 1;
     }
 
@@ -74,6 +72,7 @@ public class InGameMenu : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 
     public void ExitValidQuitGame()
