@@ -7,6 +7,7 @@ public class WaveSystemScript : MonoBehaviour
     public ZombieSpawn zombieSpawn;
     public ZombieScript zombieScript;
     public PassiveWave passiveWave;
+    public LightZone lightZone;
 
     public TextMeshProUGUI waveState;
 
@@ -49,7 +50,7 @@ public class WaveSystemScript : MonoBehaviour
         {
             currentZombie++;
             zombieSpawn.spawnRegularZombie();
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
         }
 
         yield return new WaitUntil(() => currentZombie == 0);
@@ -74,7 +75,7 @@ public class WaveSystemScript : MonoBehaviour
         {
             currentZombie++;
             zombieSpawn.spawnRegularZombie();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1.5f);
         }
 
         yield return new WaitUntil(() => currentZombie == 0);
@@ -315,7 +316,7 @@ public class WaveSystemScript : MonoBehaviour
         zombieScript.scorePoints = 20;
         zombieNumber = 90;
         zombieScript.MaxHealth = 20;
-        zombieScript.speed = 2f;
+        zombieScript.speed = 2.25f;
 
         for (int i = 0; i < zombieNumber; i++)
         {

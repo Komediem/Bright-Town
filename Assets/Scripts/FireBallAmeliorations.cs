@@ -7,8 +7,6 @@ public class FireBallAmeliorations : MonoBehaviour
     public ScoreScript scoreScript;
     public PlayerCompetences playerCompetences;
 
-    public TextMeshProUGUI currentScore;
-
     //Fireball Speed Amelioration
     public TextMeshProUGUI fireballSpeedCostText;
     public TextMeshProUGUI fireballSpeedlevelText;
@@ -30,11 +28,6 @@ public class FireBallAmeliorations : MonoBehaviour
     void Start()
     {
         fireballStats();
-    }
-
-    public void Update()
-    {
-        currentScore.text = scoreScript.score.ToString();
     }
 
     public void fireballStats()

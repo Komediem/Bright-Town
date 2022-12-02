@@ -24,6 +24,7 @@ public class InGameMenu : MonoBehaviour
     public ZombieScript zombieScript;
 
     public bool verif = false;
+    public int zombieKilledNumber;
 
     private void FixedUpdate()
     {
@@ -39,7 +40,7 @@ public class InGameMenu : MonoBehaviour
 
             maxScoreText.text = scoreScript.maxScore.ToString();
             finalScore.text = scoreScript.score.ToString();
-            zombieKilled.text = zombieScript.zombieKilledNumber.ToString();
+            zombieKilled.text = zombieKilledNumber.ToString();
         }
     }
 

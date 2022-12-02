@@ -9,7 +9,6 @@ public class LightZone : MonoBehaviour
     public PlayerCompetences playerCompetences;
     public PlayerFirePower playerFirePower;
     public GatlingModeBar gatlingModeBar;
-    public WaveSystemScript waveSystemScript;
 
     private void Start()
     {
@@ -17,7 +16,6 @@ public class LightZone : MonoBehaviour
         playerCompetences = FindObjectOfType<PlayerCompetences>();
         playerFirePower = FindObjectOfType<PlayerFirePower>();
         gatlingModeBar = FindObjectOfType<GatlingModeBar>();
-        waveSystemScript = FindObjectOfType<WaveSystemScript>();
     }
 
     public void OnTriggerStay2D(Collider2D interactionLightZone)
@@ -41,14 +39,6 @@ public class LightZone : MonoBehaviour
         {
             playerCompetences.canFire = true;
             passiveWave.InteractionTextExit();
-        }
-    }
-
-    public void despawnLightZone()
-    {
-        if(waveSystemScript.waveState.enabled == false)
-        {
-            Destroy(gameObject);
         }
     }
 }

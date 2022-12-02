@@ -7,8 +7,6 @@ public class GatlingAmeliorations : MonoBehaviour
     public ScoreScript scoreScript;
     public PlayerFirePower playerFirePower;
 
-    public TextMeshProUGUI currentScore;
-
     //Gatling Mode Bullets Speed Amelioration
     public TextMeshProUGUI bulletSpeedCostText;
     public TextMeshProUGUI bulletSpeedlevelText;
@@ -32,15 +30,10 @@ public class GatlingAmeliorations : MonoBehaviour
         gatlingModeBulletStats();
     }
 
-    public void Update()
-    {
-        currentScore.text = scoreScript.score.ToString();
-    }
-
     public void gatlingModeBulletStats()
     {
         gatlingModeScript.force = 10;
-        playerFirePower.maxGatlingBullet = 1500;
+        playerFirePower.maxGatlingBullet = 600;
         gatlingModeScript.damages = 5;
 
 

@@ -8,7 +8,7 @@ public class GatlingModeScript : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
-    public int damages = 3;
+    public int damages = 2;
 
     // Start is called before the first frame update
     void Start()

@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class ZombieScript : MonoBehaviour
 {
+    public InGameMenu inGameMenu;
+
     private Transform target;
     private Vector2 player;
-    public float speed = 1.5f;
+    public float speed = 2f;
 
     public int MaxHealth = 10;
     public int CurrentHealth;
@@ -15,10 +17,9 @@ public class ZombieScript : MonoBehaviour
     public int zombieDamages = 10;
     public int scorePoints;
 
-    public int zombieKilledNumber;
-
     void Start()
     {
+        inGameMenu = FindObjectOfType<InGameMenu>();
         CurrentHealth = MaxHealth;
     }
 
@@ -63,7 +64,7 @@ public class ZombieScript : MonoBehaviour
             FindObjectOfType<ScoreScript>().score += FindObjectOfType<WaveSystemScript>().zombieScript.scorePoints;
             FindObjectOfType<ScoreScript>().maxScore += FindObjectOfType<WaveSystemScript>().zombieScript.scorePoints;
             FindObjectOfType<WaveSystemScript>().currentZombie -= 1;
-            zombieKilledNumber++;
+            inGameMenu.zombieKilledNumber++;
         }
     }
 }

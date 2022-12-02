@@ -19,11 +19,6 @@ public class ScoreScript : MonoBehaviour
 
     void Update()
     {
-        UpdateScoreCount();
-    }
-
-    void UpdateScoreCount()
-    {
         scoreText.text = score.ToString();
     }
 }
